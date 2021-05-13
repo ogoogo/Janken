@@ -6,46 +6,46 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-    <Button
-            android:text="グー"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/gooButton"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/chokiButton"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="26dp"/>
-    <Button
-            android:text="チョキ"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/chokiButton"
-            app:layout_constraintStart_toEndOf="@+id/gooButton"
-            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/paaButton"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="26dp"/>
-    <Button
-            android:text="パー"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/paaButton"
-            app:layout_constraintStart_toEndOf="@+id/chokiButton" app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="27dp"/>
-    <TextView
-            android:text="Plater"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/Player"
-            app:layout_constraintStart_toStartOf="@+id/cpu" app:layout_constraintTop_toTopOf="@+id/gooButton"
-            android:layout_marginTop="101dp" app:layout_constraintBottom_toBottomOf="@+id/cpu"
-            android:layout_marginBottom="96dp"/>
-    <TextView
-            android:text="cpu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/cpu"
-            app:layout_constraintStart_toStartOf="@+id/result" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="223dp"/>
-    <TextView
-            android:text="勝敗"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/result"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="26dp" android:layout_marginTop="79dp" android:layout_marginStart="26dp"
-            app:layout_constraintTop_toBottomOf="@+id/cpu"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+                android:text="Player"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/Player"
+                android:layout_marginTop="101dp"
+                android:layout_marginBottom="96dp" android:textSize="36sp" android:layout_gravity="center"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/paa" android:id="@+id/cpu"
+                android:layout_gravity="center"/>
+        <TextView
+                android:text="勝敗"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/result"
+                android:layout_marginLeft="26dp" android:layout_marginTop="79dp" android:layout_marginStart="26dp"
+                android:textSize="36sp" android:layout_gravity="center"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <Button
+                    android:text="グー"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/gooButton"
+                    android:layout_marginTop="26dp" android:layout_weight="1" android:textSize="24sp"/>
+            <Button
+                    android:text="パー"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/paaButton"
+                    android:layout_marginTop="27dp" android:layout_weight="1" android:textSize="24sp"/>
+            <Button
+                    android:text="チョキ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/chokiButton"
+                    android:layout_marginTop="26dp" android:layout_weight="1" android:textSize="24sp"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
